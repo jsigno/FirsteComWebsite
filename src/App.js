@@ -1,15 +1,18 @@
-import './App.css';
-import { BroswerRouter as Router, Routes, Route} from 'react-router-dom'
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Shop from "./pages/shop/Shop";
+import Cart from "./pages/cart/Cart";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <NavBar />
+
         <Routes>
-          <Route path='/'></Route>
-          <Route path='/cart'></Route>
+          <Route path="/" element={<Shop />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
         </Routes>
-      </Router>
+
     </div>
   );
 }
